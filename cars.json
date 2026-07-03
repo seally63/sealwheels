@@ -1,40 +1,44 @@
 {
   "meta": {
-    "note": "Add a car = append one object below. status: 'live' | 'sold'. posted: whether the TikTok is uploaded yet (page can filter on this). All salary/price figures are GBP. Optional salaryNote documents any special assumption behind the figure.",
+    "note": "Add a car = append one object to `cars`. status: 'live' | 'sold'. price is the creator's MEDIAN/AVG Auto Trader market price for the model (basis for the salary figures) — NOT the featured dealer's asking price. milesPerYear = annual mileage the salary was worked out on; OMIT it for the default 5000 (only the early M3 & RS6 use 10000). videoUrl empty = clip not uploaded yet (card shows a 'clip soon' thumb but keeps all numbers). image = a file in /images used as the clip thumbnail (run tools/fetch-thumbs.sh to pull TikTok covers automatically). All GBP figures are integers. See README.md for the full field reference.",
     "lastUpdated": "2026-07-03"
   },
   "cars": [
     {
       "name": "BMW M3 Competition",
-      "year": "2022 (22)",
+      "year": "2022",
       "price": 58000,
       "salaryNet": 60950,
       "salaryGross": 86900,
-      "salaryNote": "Assumes 10,000 miles/year (higher fuel & maintenance)",
+      "milesPerYear": 10000,
       "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2022-22-bmw-m3-competition-xdrive-2/",
       "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=m3+competition",
       "dealer": "Alexanders Prestige",
       "status": "live",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7657917985163644182",
       "image": "m3-competition.jpg"
     },
     {
       "name": "Audi RS6 Avant",
-      "year": "2023 (73) Vorsprung",
+      "year": "2023",
       "price": 92000,
       "salaryNet": 85910,
       "salaryGross": 139900,
-      "salaryNote": "Assumes 10,000 miles/year (higher fuel & maintenance)",
+      "milesPerYear": 10000,
       "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2023-73-audi-rs6-vorsprung/",
       "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=rs6",
       "dealer": "Alexanders Prestige",
       "status": "live",
-      "posted": false,
+      "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7658290225466084630",
       "image": "rs6-avant.jpg"
     },
     {
       "name": "Mercedes-AMG G63",
-      "year": "2026 (26)",
+      "year": "2026",
       "price": 220000,
       "salaryNet": 167881,
       "salaryGross": 294500,
@@ -43,6 +47,8 @@
       "dealer": "Alexanders Prestige",
       "status": "live",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7657518630472568086",
       "image": "g63.jpg"
     },
     {
@@ -56,11 +62,13 @@
       "dealer": "",
       "status": "sold",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7657870753815219478",
       "image": "urus-se.jpg"
     },
     {
       "name": "Ferrari SF90 Stradale",
-      "year": "2021 Assetto Fiorano",
+      "year": "2021",
       "price": 290000,
       "salaryNet": 236186,
       "salaryGross": 423400,
@@ -69,6 +77,8 @@
       "dealer": "Amari Supercars",
       "status": "live",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7655330528970689814",
       "image": "sf90.jpg"
     },
     {
@@ -82,11 +92,13 @@
       "dealer": "Amari Supercars",
       "status": "live",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7655284708850289942",
       "image": "huracan-sto.jpg"
     },
     {
       "name": "Aston Martin Vanquish",
-      "year": "2025 (25) Volante",
+      "year": "2025",
       "price": 330000,
       "salaryNet": 246857,
       "salaryGross": 443530,
@@ -94,12 +106,14 @@
       "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=vanquish",
       "dealer": "Alexanders Prestige",
       "status": "live",
-      "posted": false,
+      "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7658269950611557654",
       "image": "vanquish.jpg"
     },
     {
       "name": "Lamborghini Temerario",
-      "year": "2026 (26)",
+      "year": "2026",
       "price": 340000,
       "salaryNet": 268911,
       "salaryGross": 485142,
@@ -108,11 +122,13 @@
       "dealer": "Alexanders Prestige",
       "status": "live",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7657126739646156054",
       "image": "temerario.jpg"
     },
     {
       "name": "Rolls-Royce Cullinan Series II Black Badge",
-      "year": "2026 (26)",
+      "year": "2026",
       "price": 430000,
       "salaryNet": 302932,
       "salaryGross": 549331,
@@ -121,19 +137,23 @@
       "dealer": "Alexanders Prestige",
       "status": "live",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7657175605422640406",
       "image": "cullinan-bb.jpg"
     },
     {
       "name": "McLaren 765LT Spider",
-      "year": "2022 (72)",
+      "year": "2022",
       "price": 420000,
       "salaryNet": 323775,
       "salaryGross": 588658,
-      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2022-72-mclaren-765lt-spider/",
+      "listingUrl": "",
       "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=765lt",
-      "dealer": "Alexanders Prestige",
-      "status": "live",
+      "dealer": "",
+      "status": "sold",
       "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7655675657455668502",
       "image": "765lt-spider.jpg"
     },
     {
@@ -146,7 +166,9 @@
       "fallbackUrl": "https://www.amarisupercars.com/stock/?q=488+pista",
       "dealer": "",
       "status": "sold",
-      "posted": false,
+      "posted": true,
+      "platform": "tiktok",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7657546903084748054",
       "image": "488-pista-spider.jpg"
     }
   ]

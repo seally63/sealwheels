@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sealwheels — How much do you need to make to own it</title>
+<meta name="description" content="How much do you need to make to own it — the honest take-home salary behind each supercar, with real finance, insurance, fuel, tax and maintenance built in.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+
+  <!-- Header -->
+  <header class="head">
+    <div class="brandrow">
+      <div class="brand">Sealwheels</div>
+    </div>
+    <h1 class="h1">How much do you <span class="accent">need</span> to make to own it</h1>
+    <p class="intro">Every figure assumes a 30% deposit, finance at 9.9% APR over 5 years, plus approximate real-world insurance, fuel, tax and maintenance. The car featured cost 30% of take-home pay.</p>
+    <button type="button" class="toplink" data-scroll="suggest-form">Got a car in mind? Suggest the next video <span class="arr">&darr;</span></button>
+  </header>
+
+  <!-- List header -->
+  <div class="listhead">
+    <div class="lbl">The list · <span id="car-count">—</span> cars</div>
+  </div>
+
+  <!-- Search bar: free-text search + a filter icon that reveals brand & max-salary -->
+  <div class="search">
+    <div class="search-input">
+      <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input id="search-q" type="search" placeholder="Search make or model…" aria-label="Search make or model">
+      <button type="button" id="filter-toggle" class="filter-btn" aria-label="Filters" aria-expanded="false" aria-controls="filter-panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="10" y2="7"></line><line x1="14" y1="7" x2="20" y2="7"></line><line x1="4" y1="17" x2="6" y2="17"></line><line x1="10" y1="17" x2="20" y2="17"></line><circle cx="12" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg>
+      </button>
+    </div>
+    <div class="search-panel" id="filter-panel" hidden>
+      <div class="selwrap">
+        <select id="filter-brand" class="fld" aria-label="Filter by brand">
+          <option value="">All brands</option>
+        </select>
+        <span class="caret">▼</span>
+      </div>
+      <div class="selwrap">
+        <select id="filter-salary" class="fld" aria-label="Maximum salary">
+          <option value="">Any salary</option>
+          <option value="100000">Up to £100k/yr</option>
+          <option value="150000">Up to £150k/yr</option>
+          <option value="200000">Up to £200k/yr</option>
+          <option value="300000">Up to £300k/yr</option>
+          <option value="500000">Up to £500k/yr</option>
+        </select>
+        <span class="caret">▼</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Car list (rendered from cars.json by render.js) -->
+  <section id="car-list" class="list" aria-live="polite">
+    <div class="state">Loading the list…</div>
+  </section>
+
+  <!-- PRIMARY: Find me a car -->
+  <form id="find-form" class="find" method="POST" data-ok="Sent — I'll dig through the market and reply myself. Check your inbox.">
+    <div class="eyebrow">WANT ONE FOR REAL?</div>
+    <div class="title">Find me a car</div>
+    <div class="desc">Real budget, what you're after and I'll send back options. No markup, no pressure.</div>
+
+    <!-- Honeypot (spam trap) — leave empty; bots fill it, Formspree drops it. -->
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+    <input type="hidden" name="_subject" value="Sealwheels — Find me a car (lead)">
+
+    <div class="fields">
+      <input class="fld full" type="text" name="name" placeholder="Your name" required>
+      <input class="fld full" type="email" name="email" placeholder="Email" required>
+      <input class="fld full" type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="Phone (optional)">
+      <input class="fld half" type="text" name="make" placeholder="Make">
+      <input class="fld half" type="text" name="model" placeholder="Model">
+      <input class="fld half mono" type="text" inputmode="numeric" name="budgetMax" placeholder="Budget £ max" required>
+      <input class="fld half mono" type="text" inputmode="numeric" name="maxMileage" placeholder="Max mileage">
+      <div class="selwrap">
+        <select class="fld" name="fuel">
+          <option value="Any">Fuel: Any</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="Electric">Electric</option>
+        </select>
+        <span class="caret">▼</span>
+      </div>
+      <div class="selwrap">
+        <select class="fld" name="timeframe">
+          <option value="">Timeframe</option>
+          <option>Just curious</option>
+          <option>In a few months</option>
+          <option>Ready now</option>
+        </select>
+        <span class="caret">▼</span>
+      </div>
+      <textarea class="fld full" name="notes" rows="2" placeholder="Anything else, colour, spec, deal-breakers…"></textarea>
+    </div>
+
+    <button class="submit" type="submit">Send it over →</button>
+    <div class="reassure">Your details are kept strictly confidential. Never sold or shared with third parties, and permanently deleted once your search ends.</div>
+    <div class="form-msg" role="status"></div>
+  </form>
+
+  <!-- SECONDARY: Film it next -->
+  <form id="suggest-form" class="suggest" method="POST" data-ok="Added — cheers for the suggestion.">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+    <input type="hidden" name="_subject" value="Sealwheels — Film it next (vote)">
+    <div class="eyebrow">FILM IT NEXT</div>
+    <div class="title">What should I break down next?</div>
+    <div class="row">
+      <input class="sfld" type="text" name="handle" placeholder="@yourhandle" required>
+      <input class="sfld name" type="text" name="car" placeholder="Car / year" required>
+      <button class="sadd" type="submit">Add</button>
+    </div>
+    <div class="form-msg" role="status"></div>
+  </form>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <div class="links">
+      <a href="https://www.tiktok.com/@lil_seal63" target="_blank" rel="noopener">TikTok ↗</a>
+      <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <div class="fine">Sealwheels · business: jyronanling@gmail.com</div>
+  </footer>
+
+</main>
+
+<!-- Fixed bottom CTA -->
+<div class="dock">
+  <button type="button" data-scroll="find-form">Find me a car →</button>
+</div>
+
+<script src="render.js"></script>
+</body>
+</html>
