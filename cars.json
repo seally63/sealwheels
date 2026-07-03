@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "note": "Add a car = append one object below. status: 'live' | 'sold'. posted: whether the TikTok is uploaded yet (page can filter on this). All salary/price figures are GBP. Optional salaryNote documents any special assumption behind the figure.",
+    "lastUpdated": "2026-07-03"
+  },
+  "cars": [
+    {
+      "name": "BMW M3 Competition",
+      "year": "2022 (22)",
+      "price": 58000,
+      "salaryNet": 60950,
+      "salaryGross": 86900,
+      "salaryNote": "Assumes 10,000 miles/year (higher fuel & maintenance)",
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2022-22-bmw-m3-competition-xdrive-2/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=m3+competition",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": true,
+      "image": "m3-competition.jpg"
+    },
+    {
+      "name": "Audi RS6 Avant",
+      "year": "2023 (73) Vorsprung",
+      "price": 92000,
+      "salaryNet": 85910,
+      "salaryGross": 139900,
+      "salaryNote": "Assumes 10,000 miles/year (higher fuel & maintenance)",
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2023-73-audi-rs6-vorsprung/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=rs6",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": false,
+      "image": "rs6-avant.jpg"
+    },
+    {
+      "name": "Mercedes-AMG G63",
+      "year": "2026 (26)",
+      "price": 220000,
+      "salaryNet": 167881,
+      "salaryGross": 294500,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2026-26-mercedes-benz-g63-amg-vat-q/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=g63",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": true,
+      "image": "g63.jpg"
+    },
+    {
+      "name": "Lamborghini Urus SE",
+      "year": "2025",
+      "price": 250000,
+      "salaryNet": 189394,
+      "salaryGross": 335108,
+      "listingUrl": "",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=urus",
+      "dealer": "",
+      "status": "sold",
+      "posted": true,
+      "image": "urus-se.jpg"
+    },
+    {
+      "name": "Ferrari SF90 Stradale",
+      "year": "2021 Assetto Fiorano",
+      "price": 290000,
+      "salaryNet": 236186,
+      "salaryGross": 423400,
+      "listingUrl": "https://www.amarisupercars.com/stock/details/2021-ferrari-sf90-assetto-fiorano-assetto-fiorano/1241529",
+      "fallbackUrl": "https://www.amarisupercars.com/stock/?q=sf90",
+      "dealer": "Amari Supercars",
+      "status": "live",
+      "posted": true,
+      "image": "sf90.jpg"
+    },
+    {
+      "name": "Lamborghini Huracan STO",
+      "year": "2022",
+      "price": 300000,
+      "salaryNet": 241537,
+      "salaryGross": 433500,
+      "listingUrl": "https://www.amarisupercars.com/stock/details/2022-lamborghini-huracan-sto/1241727",
+      "fallbackUrl": "https://www.amarisupercars.com/stock/?q=huracan+sto",
+      "dealer": "Amari Supercars",
+      "status": "live",
+      "posted": true,
+      "image": "huracan-sto.jpg"
+    },
+    {
+      "name": "Aston Martin Vanquish",
+      "year": "2025 (25) Volante",
+      "price": 330000,
+      "salaryNet": 246857,
+      "salaryGross": 443530,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2025-25-aston-martin-vanquish-volante-vat-q/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=vanquish",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": false,
+      "image": "vanquish.jpg"
+    },
+    {
+      "name": "Lamborghini Temerario",
+      "year": "2026 (26)",
+      "price": 340000,
+      "salaryNet": 268911,
+      "salaryGross": 485142,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2026-26-lamborghini-temerario/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=temerario",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": true,
+      "image": "temerario.jpg"
+    },
+    {
+      "name": "Rolls-Royce Cullinan Series II Black Badge",
+      "year": "2026 (26)",
+      "price": 430000,
+      "salaryNet": 302932,
+      "salaryGross": 549331,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2026-26-rolls-royce-cullinan-series-ii-black-badge/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=cullinan",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": true,
+      "image": "cullinan-bb.jpg"
+    },
+    {
+      "name": "McLaren 765LT Spider",
+      "year": "2022 (72)",
+      "price": 420000,
+      "salaryNet": 323775,
+      "salaryGross": 588658,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2022-72-mclaren-765lt-spider/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=765lt",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": true,
+      "image": "765lt-spider.jpg"
+    },
+    {
+      "name": "Ferrari 488 Pista Spider",
+      "year": "2020",
+      "price": 650000,
+      "salaryNet": 464662,
+      "salaryGross": 854482,
+      "listingUrl": "",
+      "fallbackUrl": "https://www.amarisupercars.com/stock/?q=488+pista",
+      "dealer": "",
+      "status": "sold",
+      "posted": false,
+      "image": "488-pista-spider.jpg"
+    }
+  ]
+}
