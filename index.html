@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sealwheels — How much do you need to make to own it</title>
-<meta name="description" content="How much do you need to make to own it — the honest take-home salary behind each supercar, with real finance, insurance, fuel, tax and maintenance built in.">
+<title>Sealwheels: How much do you need to make to own it</title>
+<meta name="description" content="How much do you need to make to own it. The honest take-home salary behind each supercar, with real finance, insurance, fuel, tax and maintenance built in.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
 
   <!-- List header -->
   <div class="listhead">
-    <div class="lbl">The list · <span id="car-count">—</span> cars</div>
+    <div class="lbl">The list · <span id="car-count">…</span> cars</div>
   </div>
 
   <!-- Search bar: free-text search + a filter icon that reveals brand & max-salary -->
@@ -65,33 +65,32 @@
   </section>
 
   <!-- PRIMARY: Find me a car -->
-  <form id="find-form" class="find" method="POST" data-ok="Sent — I'll dig through the market and reply myself. Check your inbox.">
+  <form id="find-form" class="find" method="POST" data-ok="That went through. I'll personally find your car and reply myself.">
     <div class="eyebrow">WANT ONE FOR REAL?</div>
     <div class="title">Find me a car</div>
     <div class="desc">Real budget, what you're after and I'll send back options. No markup, no pressure.</div>
 
     <!-- Honeypot (spam trap) — leave empty; bots fill it, Formspree drops it. -->
     <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-    <input type="hidden" name="_subject" value="Sealwheels — Find me a car (lead)">
+    <input type="hidden" name="_subject" value="Sealwheels: Find me a car (lead)">
 
     <div class="fields">
       <input class="fld full" type="text" name="name" placeholder="Your name" required>
       <input class="fld full" type="email" name="email" placeholder="Email" required>
       <input class="fld full" type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="Phone (optional)">
-      <input class="fld half" type="text" name="make" placeholder="Make">
+      <input class="fld half" type="text" name="brand" placeholder="Brand">
       <input class="fld half" type="text" name="model" placeholder="Model">
-      <input class="fld half mono" type="text" inputmode="numeric" name="budgetMax" placeholder="Budget £ max" required>
-      <input class="fld half mono" type="text" inputmode="numeric" name="maxMileage" placeholder="Max mileage">
-      <div class="selwrap">
-        <select class="fld" name="fuel">
-          <option value="Any">Fuel: Any</option>
-          <option value="Petrol">Petrol</option>
-          <option value="Hybrid">Hybrid</option>
-          <option value="Electric">Electric</option>
-        </select>
-        <span class="caret">▼</span>
+      <div class="unitfield">
+        <span class="unit" aria-hidden="true">£</span>
+        <input type="text" inputmode="numeric" name="budgetMax" placeholder="Max budget" required>
       </div>
-      <div class="selwrap">
+      <div class="unitfield">
+        <input type="text" inputmode="numeric" name="maxMileage" placeholder="Max mileage">
+        <span class="unit" aria-hidden="true">miles</span>
+      </div>
+      <input class="fld half mono" type="text" inputmode="numeric" name="yearFrom" placeholder="Year from">
+      <input class="fld half mono" type="text" inputmode="numeric" name="yearTo" placeholder="Year to">
+      <div class="selwrap full">
         <select class="fld" name="timeframe">
           <option value="">Timeframe</option>
           <option>Just curious</option>
@@ -109,9 +108,9 @@
   </form>
 
   <!-- SECONDARY: Film it next -->
-  <form id="suggest-form" class="suggest" method="POST" data-ok="Added — cheers for the suggestion.">
+  <form id="suggest-form" class="suggest" method="POST" data-ok="Added! Cheers for the suggestion.">
     <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-    <input type="hidden" name="_subject" value="Sealwheels — Film it next (vote)">
+    <input type="hidden" name="_subject" value="Sealwheels: Film it next (vote)">
     <div class="eyebrow">FILM IT NEXT</div>
     <div class="title">What should I break down next?</div>
     <div class="row">

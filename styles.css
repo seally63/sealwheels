@@ -204,9 +204,27 @@ body {
 .fld.full { flex: 1 1 100%; }
 .fld.half { flex: 1 1 calc(50% - 6px); min-width: 0; }
 .selwrap { flex: 1 1 calc(50% - 6px); min-width: 0; position: relative; }
+.selwrap.full { flex-basis: 100%; }
 .selwrap select { width: 100%; appearance: none; }
 .selwrap .caret { position: absolute; right: 12px; top: 16px; pointer-events: none; color: var(--mut2); font-size: 9px; }
 textarea.fld { resize: none; font-size: 13px; }
+
+/* Fields with a £ prefix / "miles" suffix that appear once you type */
+.unitfield {
+  display: flex; align-items: center; gap: 6px; flex: 1 1 calc(50% - 6px); min-width: 0;
+  border: 1px solid var(--field-line); background: var(--field-bg); border-radius: 10px; padding: 0 14px;
+}
+.unitfield:focus-within { border-color: var(--lime); }
+.unitfield .unit {
+  flex: none; visibility: hidden;
+  font: 500 14px 'JetBrains Mono', monospace; color: var(--mut2);
+}
+.unitfield.filled .unit { visibility: visible; }
+.unitfield input {
+  flex: 1; min-width: 0; background: none; border: none; outline: none; padding: 13px 0;
+  font: 500 14px 'JetBrains Mono', monospace; color: var(--ink);
+}
+.unitfield input::placeholder { color: var(--mut3); }
 
 .submit {
   width: 100%; margin-top: 16px; background: var(--lime); color: #0d0e10; border: none;
@@ -215,6 +233,19 @@ textarea.fld { resize: none; font-size: 13px; }
 }
 .submit:active { transform: translateY(1px); }
 .reassure { text-align: center; font: 400 10px 'JetBrains Mono', monospace; color: var(--mut3); margin-top: 11px; }
+
+/* Confirmation panel that replaces a form after a successful submit */
+.form-done { text-align: center; padding: 20px 6px; }
+.form-done-check {
+  width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%;
+  background: var(--lime); color: #0d0e10;
+  display: flex; align-items: center; justify-content: center;
+  font: 800 24px 'Barlow Condensed', sans-serif;
+}
+.form-done p {
+  margin: 0 auto; max-width: 320px;
+  font: 500 15px/1.5 'Barlow', sans-serif; color: var(--ink);
+}
 
 /* ---- Secondary: Film it next ---- */
 .suggest { margin: 22px 20px 0; border-top: 1px solid var(--line); padding-top: 16px; scroll-margin-top: 16px; }

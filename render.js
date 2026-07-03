@@ -14,8 +14,8 @@
 
   // Two SEPARATE Formspree endpoints so buyer leads and content votes land apart.
   // Create two forms at https://formspree.io, then paste each form's endpoint here.
-  const FORMSPREE_LEADS = 'https://formspree.io/f/REPLACE_LEADS_ID'; // "Find me a car"
-  const FORMSPREE_VOTES = 'https://formspree.io/f/REPLACE_VOTES_ID'; // "Film it next"
+  const FORMSPREE_LEADS = 'https://formspree.io/f/mbdvqlaq'; // "Find me a car"
+  const FORMSPREE_VOTES = 'https://formspree.io/f/mqevwadr'; // "Film it next"
 
   const DATA_URL = 'cars.json';
 
@@ -122,7 +122,7 @@
     const soldOverlay = v.isSold ? `
       <a class="sold-overlay" href="${esc(v.href)}" target="_blank" rel="noopener">
         <span class="sold-word">SOLD</span>
-        <span class="sold-sub">${esc(v.name)} — find similar &rarr;</span>
+        <span class="sold-sub">${esc(v.name)} · find similar &rarr;</span>
       </a>` : ``;
 
     return `
@@ -149,7 +149,7 @@
   function renderCars(cars, mount, countEl) {
     if (countEl) countEl.textContent = cars.length;
     if (!cars.length) {
-      mount.innerHTML = `<div class="state">No cars match — try widening your filters.</div>`;
+      mount.innerHTML = `<div class="state">No cars match. Try widening your filters.</div>`;
       return;
     }
     mount.innerHTML = cars.map((c) => cardHTML(toView(c))).join('');
@@ -169,7 +169,7 @@
       e.preventDefault();
 
       if (endpoint.includes('REPLACE_')) {
-        say('Form not connected yet — paste your Formspree endpoint in render.js.', false);
+        say('Form not connected yet. Paste your Formspree endpoint in render.js.', false);
         return;
       }
 
@@ -185,15 +185,17 @@
           headers: { Accept: 'application/json' },
         });
         if (res.ok) {
-          form.reset();
-          say(form.getAttribute('data-ok') || 'Thanks — got it.', true);
-        } else {
-          say('Something went wrong — please try again.', false);
+          // Replace the whole form with a confirmation panel — also blocks re-submits.
+          const done = form.getAttribute('data-ok') || 'Thanks, got it.';
+          form.innerHTML =
+            `<div class="form-done"><div class="form-done-check" aria-hidden="true">✓</div><p>${esc(done)}</p></div>`;
+          return;
         }
+        say('Something went wrong. Please try again.', false);
       } catch (_) {
-        say('Network error — please try again.', false);
+        say('Network error. Please try again.', false);
       } finally {
-        if (btn) { btn.disabled = false; btn.textContent = label; }
+        if (btn && btn.isConnected) { btn.disabled = false; btn.textContent = label; }
       }
     });
   }
@@ -217,6 +219,15 @@
         const target = document.getElementById(el.getAttribute('data-scroll'));
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
+    });
+
+    // £ / miles affix shows only once the field has a value.
+    document.querySelectorAll('.unitfield').forEach((w) => {
+      const inp = w.querySelector('input');
+      if (!inp) return;
+      const sync = () => w.classList.toggle('filled', inp.value.trim().length > 0);
+      inp.addEventListener('input', sync);
+      sync();
     });
 
     // Load + render the car list, with brand + max-salary filtering.
