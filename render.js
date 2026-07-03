@@ -119,14 +119,13 @@
       ? `<a class="thumb" style="--poster:${v.poster}" href="${esc(v.videoUrl)}" target="_blank" rel="noopener">${thumbInner}</a>`
       : `<div class="thumb" style="--poster:${v.poster}">${thumbInner}</div>`;
 
-    const soldOverlay = v.isSold ? `
-      <a class="sold-overlay" href="${esc(v.href)}" target="_blank" rel="noopener">
-        <span class="sold-word">SOLD</span>
-        <span class="sold-sub">${esc(v.name)} · find similar &rarr;</span>
-      </a>` : ``;
+    // Sold: a stamp over the body only (the thumbnail stays tappable to the video).
+    const soldCover = v.isSold
+      ? `<div class="sold-cover"><span class="sold-word">SOLD</span></div>`
+      : ``;
 
     return `
-      <article class="card">
+      <article class="card${v.isSold ? ' sold' : ''}">
         <div class="card-main">
           ${thumb}
           <div class="card-body">
@@ -136,13 +135,13 @@
               <span class="salary-net">${esc(v.netLabel)}</span>
               <span class="salary-unit">/yr net to own</span>
             </div>
+            ${soldCover}
           </div>
         </div>
         <a class="card-cta" href="${esc(v.href)}" target="_blank" rel="noopener">
           <span class="cta-label">${esc(v.ctaLabel)}</span>
           <span class="cta-arrow">&rarr;</span>
         </a>
-        ${soldOverlay}
       </article>`;
   }
 
