@@ -21,6 +21,21 @@
       "image": "m3-competition.jpg"
     },
     {
+      "name": "Land Rover Defender 110 V8 P525",
+      "year": "2022",
+      "price": 73995,
+      "salaryNet": 78070,
+      "milesPerYear": 10000,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2022-22-land-rover-defender-110-v8-p525/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=defender",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": false,
+      "platform": "tiktok",
+      "videoUrl": "",
+      "image": "defender-110-v8.jpg"
+    },
+    {
       "name": "Audi RS6 Avant",
       "year": "2023",
       "price": 92000,
