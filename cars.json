@@ -30,9 +30,9 @@
       "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=defender",
       "dealer": "Alexanders Prestige",
       "status": "live",
-      "posted": false,
+      "posted": true,
       "platform": "tiktok",
-      "videoUrl": "",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7658629349003775254",
       "image": "defender-110-v8.jpg"
     },
     {
