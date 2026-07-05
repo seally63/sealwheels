@@ -36,6 +36,21 @@
       "image": "defender-110-v8.jpg"
     },
     {
+      "name": "Aston Martin DB11",
+      "year": "2021",
+      "price": 86995,
+      "salaryNet": 80037,
+      "milesPerYear": 10000,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2021-71-aston-martin-db11-v8/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=db11",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": false,
+      "platform": "tiktok",
+      "videoUrl": "",
+      "image": "db11.jpg"
+    },
+    {
       "name": "Audi RS6 Avant",
       "year": "2023",
       "price": 92000,
