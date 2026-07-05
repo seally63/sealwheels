@@ -112,6 +112,21 @@
       "image": "huracan-sto.jpg"
     },
     {
+      "name": "Ferrari F8 Spider",
+      "year": "2023",
+      "price": 329995,
+      "salaryNet": 237750,
+      "milesPerYear": 10000,
+      "listingUrl": "https://www.alexandersprestige.co.uk/vehicle/2023-23-ferrari-f8-spider-2/",
+      "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=f8",
+      "dealer": "Alexanders Prestige",
+      "status": "live",
+      "posted": false,
+      "platform": "tiktok",
+      "videoUrl": "",
+      "image": "f8-spider.jpg"
+    },
+    {
       "name": "Aston Martin Vanquish",
       "year": "2025",
       "price": 330000,
