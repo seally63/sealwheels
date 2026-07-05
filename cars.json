@@ -136,9 +136,9 @@
       "fallbackUrl": "https://www.alexandersprestige.co.uk/vehicles/?search=f8",
       "dealer": "Alexanders Prestige",
       "status": "live",
-      "posted": false,
+      "posted": true,
       "platform": "tiktok",
-      "videoUrl": "",
+      "videoUrl": "https://www.tiktok.com/@lil_seal63/video/7658997545099611414",
       "image": "f8-spider.jpg"
     },
     {
