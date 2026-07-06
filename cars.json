@@ -51,6 +51,21 @@
       "image": "db11.jpg"
     },
     {
+      "name": "Mercedes-Benz E63 S AMG Final Edition",
+      "year": "2023",
+      "price": 91950,
+      "salaryNet": 84003,
+      "milesPerYear": 10000,
+      "listingUrl": "https://www.romansinternational.com/used/cars/mercedes-benz/e-class/e63-s-amg-final-edition-4590",
+      "fallbackUrl": "https://www.romansinternational.com/used/cars/mercedes-benz/e-class",
+      "dealer": "Romans International",
+      "status": "live",
+      "posted": false,
+      "platform": "tiktok",
+      "videoUrl": "",
+      "image": "e63s-final-edition.jpg"
+    },
+    {
       "name": "Audi RS6 Avant",
       "year": "2023",
       "price": 92000,
