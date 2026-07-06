@@ -58,6 +58,7 @@
   function brandOf(car) {
     if (car.brand) return car.brand;
     const n = car.name || '';
+    if (n.startsWith('Mercedes')) return 'Mercedes'; // group AMG + Benz under one filter
     for (const b of MULTIWORD_BRANDS) if (n.startsWith(b)) return b;
     return n.split(' ')[0] || '';
   }
