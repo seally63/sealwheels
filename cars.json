@@ -21,6 +21,21 @@
       "image": "m3-competition.jpg"
     },
     {
+      "name": "BMW M5 Competition",
+      "year": "2023",
+      "price": 73990,
+      "salaryNet": 73643,
+      "milesPerYear": 10000,
+      "listingUrl": "https://redlinespecialistcars.co.uk/car/bmw-m5-202607033850315/",
+      "fallbackUrl": "https://redlinespecialistcars.co.uk/cars/",
+      "dealer": "Redline Specialist Cars",
+      "status": "live",
+      "posted": false,
+      "platform": "tiktok",
+      "videoUrl": "",
+      "image": "m5-competition.jpg"
+    },
+    {
       "name": "Land Rover Defender 110 V8 P525",
       "year": "2022",
       "price": 73995,
