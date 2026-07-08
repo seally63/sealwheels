@@ -232,6 +232,21 @@
       "image": "765lt-spider.jpg"
     },
     {
+      "name": "Porsche 911 GT2 RS",
+      "year": "2018",
+      "price": 534995,
+      "salaryNet": 363753,
+      "milesPerYear": 10000,
+      "listingUrl": "https://www.amarisupercars.com/stock/details/2018-porsche-911991-gt2-rs-weissach-pdk/1241758",
+      "fallbackUrl": "https://www.amarisupercars.com/stock/?q=gt2+rs",
+      "dealer": "Amari Supercars",
+      "status": "live",
+      "posted": false,
+      "platform": "tiktok",
+      "videoUrl": "",
+      "image": "gt2-rs.jpg"
+    },
+    {
       "name": "Ferrari 488 Pista Spider",
       "year": "2020",
       "price": 650000,
